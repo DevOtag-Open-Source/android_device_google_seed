@@ -35,9 +35,3 @@ persist.radio.ecc_hard_1=998
 persist.radio.ecc_hard_count=1
 rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
 ro.telephony.default_network=9
-
-# OEM props
-import /oem/oem.prop persist.radio.multisim.config
-import /oem/oem.prop ro.product.manufacturer
-import /oem/oem.prop ro.product.model
-import /oem/oem.prop ro.product.name
