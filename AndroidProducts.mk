@@ -14,4 +14,5 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_seed.mk
+    $(LOCAL_DIR)/aosp_seed.mk \
+    $(LOCAL_DIR)/full_seed.mk 

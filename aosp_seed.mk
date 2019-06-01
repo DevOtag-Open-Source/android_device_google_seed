@@ -16,12 +16,12 @@
 $(call inherit-product, device/google/seed/full_seed.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
-PRODUCT_NAME := lineage_seed
+PRODUCT_NAME := aosp_seed
 BOARD_VENDOR := google
 PRODUCT_DEVICE := seed
 

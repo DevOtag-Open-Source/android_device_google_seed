@@ -59,6 +59,8 @@ BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET := 0x01000000
 TARGET_KERNEL_CONFIG := seed_defconfig
 
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
@@ -70,3 +72,5 @@ BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # Inherit from proprietary files
 -include vendor/google/seed/BoardConfigVendor.mk
+
+ALLOW_MISSING_DEPENDENCIES=true
