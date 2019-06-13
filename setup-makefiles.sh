@@ -21,7 +21,7 @@ set -e
 DEVICE=seed
 VENDOR=google
 
-INITIAL_COPYRIGHT_YEAR=2015
+INITIAL_COPYRIGHT_YEAR=2016
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"

@@ -1,1 +1,1 @@
-add_lunch_combo aosp_seed-userdebug
+add_lunch_combo ion_seed-userdebug

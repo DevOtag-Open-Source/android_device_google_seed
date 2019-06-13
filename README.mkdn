@@ -13,4 +13,3 @@ Battery | 2500 mAh (removable)
 Display | 720 x 1280 pixels, 5" (294ppi)
 Rear Camera  | 13.0 MP Dual-Flash
 Front Camera | 5.0 MP
-

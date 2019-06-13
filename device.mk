@@ -25,10 +25,6 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
-# Doze
-PRODUCT_PACKAGES += \
-    SeedDoze
-
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/acdb/QRD_Bluetooth_cal.acdb:system/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb \
@@ -46,7 +42,9 @@ PRODUCT_COPY_FILES += \
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 
-TARGET_BOOT_ANIMATION_RES := 720
+# Doze
+PRODUCT_PACKAGES += \
+    SeedDoze
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -58,8 +56,12 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl-legacy \
     camera.device@1.0-impl-legacy
 
+# Dalvik
+$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+
 # Display
 PRODUCT_PACKAGES += \
+    libjni_livedisplay \
     pp_calib_data_booyi_OTM1287_720p_video_mode_dsi_panel.xml
 
 # GPS
@@ -90,6 +92,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
     $(LOCAL_PATH)/configs/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
+
+# OEM customization
+PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
+    ro.product.name \
+    ro.product.manufacturer \
+    ro.product.model
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -122,7 +130,7 @@ PRODUCT_PACKAGES += \
 
 # Touchscreen
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/display/synaptics_dsx_fw_update_boyi.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/synaptics_dsx_fw_update_boyi.bin
+    $(LOCAL_PATH)/display/synaptics_dsx_fw_update_boyi.bin:system/etc/firmware/synaptics_dsx_fw_update_boyi.bin
 
 # USB ID
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \

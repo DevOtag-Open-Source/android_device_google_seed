@@ -33,10 +33,6 @@ BOARD_CAMERA_SENSORS := s5k5e2_olq5f19 s5k3m2_olqba20 s5k4h5_cma334
 TARGET_USE_VENDOR_CAMERA_EXT := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 
-# Charger
-BOARD_CHARGER_DISABLE_INIT_BLANK := true
-BOARD_CHARGER_ENABLE_SUSPEND := true
-
 # Filesystem
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33553920
@@ -59,7 +55,8 @@ BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET := 0x01000000
 TARGET_KERNEL_CONFIG := seed_defconfig
 
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+# Power
+TARGET_HAS_NO_POWER_STATS := true
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
@@ -70,7 +67,10 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 # SELinux
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
-# Inherit from proprietary files
--include vendor/google/seed/BoardConfigVendor.mk
+# TWRP
+ifeq ($(WITH_TWRP),true)
+include $(DEVICE_PATH)/twrp.mk
+endif
 
-ALLOW_MISSING_DEPENDENCIES=true
+# Inherit from proprietary files
+include vendor/google/seed/BoardConfigVendor.mk
