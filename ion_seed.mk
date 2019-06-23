@@ -23,10 +23,10 @@ TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
 TARGET_GAPPS_ARCH := arm
 TARGET_BOOT_ANIMATION_RES := 720
-ION_BUILD_TYPE=Release
+#ION_BUILD_TYPE=Release
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ion.maintainer=Yunus Akbaş(Celexa)
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    ro.ion.maintainer=Yunus Akbaş(Celexa)
 
 TARGET_OTA_ASSERT_DEVICE := ctih220_sprout,gm4g_sprout,gm4g_s_sprout,imobileiq2_sprout,seed
 
