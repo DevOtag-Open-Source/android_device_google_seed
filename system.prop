@@ -10,7 +10,15 @@ persist.camera.hal.debug.mask=0
 camera2.portability.force_api=1
 
 # Display
-ro.sf.lcd_density=320
+ro.sf.lcd_density=280
+
+# Dalvik
+dalvik.vm.heapstartsize=8m
+dalvik.vm.heapgrowthlimit=192m
+dalvik.vm.heapsize=512m
+dalvik.vm.heaptargetutilization=0.75
+dalvik.vm.heapminfree=512k
+dalvik.vm.heapmaxfree=8m
 
 # Factory reset protection
 ro.frp.pst=/dev/block/platform/soc.0/7824900.sdhci/by-name/frp
