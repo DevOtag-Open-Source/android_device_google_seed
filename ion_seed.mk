@@ -28,8 +28,6 @@ TARGET_BOOT_ANIMATION_RES := 720
 #PRODUCT_PROPERTY_OVERRIDES += \
 #    ro.ion.maintainer=Yunus Akbaş(Celexa)
 
-TARGET_OTA_ASSERT_DEVICE := ctih220_sprout,gm4g_sprout,gm4g_s_sprout,imobileiq2_sprout,seed
-
 PRODUCT_NAME := ion_seed
 PRODUCT_DEVICE := seed
 PRODUCT_BRAND := google
