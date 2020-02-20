@@ -22,6 +22,9 @@ include device/cyanogen/msm8916-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/google/seed
 
+# We still use copy headers.
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+
 # Assertions
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 
