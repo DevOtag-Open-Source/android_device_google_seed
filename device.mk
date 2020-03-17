@@ -66,6 +66,10 @@ PRODUCT_PACKAGES += \
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
+# DevOtag
+PRODUCT_PACKAGES += \
+    DevOtag
+
 # Display
 PRODUCT_PACKAGES += \
     libjni_livedisplay \
