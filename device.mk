@@ -71,6 +71,10 @@ PRODUCT_PACKAGES += \
     libjni_livedisplay \
     pp_calib_data_booyi_OTM1287_720p_video_mode_dsi_panel.xml
 
+# Doze
+PRODUCT_PACKAGES += \
+    SeedDoze
+
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8916
