@@ -17,6 +17,9 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+# Enable go mode
+$(call inherit-product, $(SRC_TARGET_DIR)/product/go_defaults.mk)
+
 # Inherit from seed device
 $(call inherit-product, device/google/seed/device.mk)
 
