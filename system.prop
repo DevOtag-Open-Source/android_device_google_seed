@@ -1,3 +1,21 @@
+# Import some prop from oem
+import /oem/oem.prop ro.frp.pst
+import /oem/oem.prop ro.product.device
+import /oem/oem.prop ro.product.name
+import /oem/oem.prop ro.product.manufacturer
+import /oem/oem.prop ro.product.model
+import /oem/oem.prop ro.product.locale.language
+import /oem/oem.prop ro.product.locale.region
+import /oem/oem.prop ro.com.google.clientidbase
+import /oem/oem.prop ro.config.ringtone
+import /oem/oem.prop ro.config.notification_sound
+import /oem/oem.prop ro.config.alarm_alert
+import /oem/oem.prop ro.config.wallpaper
+import /oem/oem.prop ro.config.wallpaper_component
+import /oem/oem.prop ro.hardware.sensors
+import /oem/oem.prop ro.oem.*
+import /oem/oem.prop oem.*
+
 # Audio
 ro.vendor.audio.sdk.fluencetype=fluence
 persist.vendor.audio.fluence.voicecall=true
@@ -13,15 +31,84 @@ camera2.portability.force_api=1
 ro.sf.lcd_density=280
 
 # Dalvik
+ro.min_freq_0=800000
 dalvik.vm.heapstartsize=8m
-dalvik.vm.heapgrowthlimit=192m
-dalvik.vm.heapsize=512m
+dalvik.vm.heapgrowthlimit=128m
+dalvik.vm.heapsize=256m
 dalvik.vm.heaptargetutilization=0.75
 dalvik.vm.heapminfree=512k
 dalvik.vm.heapmaxfree=8m
 
-# Factory reset protection
-ro.frp.pst=/dev/block/platform/soc.0/7824900.sdhci/by-name/frp
+debug.sf.hw=1
+debug.egl.hw=1
+persist.hwc.mdpcomp.enable=true
+debug.mdpcomp.logs=0
+dalvik.vm.heapsize=36m
+dev.pm.dyn_samplingrate=1
+persist.demo.hdmirotationlock=false
+
+#system props for the MM modules
+media.stagefright.enable-player=true
+media.stagefright.enable-http=true
+media.stagefright.enable-aac=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-fma2dp=true
+media.stagefright.enable-scan=true
+mm.enable.smoothstreaming=true
+mmp.enable.3g2=true
+media.aac_51_output_enabled=true
+media.swhevccodectype=1
+vidc.enc.narrow.searchrange=0
+
+#
+# system props for the data modules
+#
+ro.use_data_netmgrd=true
+persist.data.netmgrd.qos.enable=true
+
+#system props for time-services
+persist.timed.enable=true
+
+#
+# system prop for opengles version
+#
+# 196608 is decimal for 0x30000 to report version 3
+ro.opengles.version=196608
+
+# System property for cabl
+ro.qualcomm.cabl=2
+
+#
+# System props for telephony
+# System prop to turn on CdmaLTEPhone always
+telephony.lteOnCdmaDevice=1
+
+#enable voice path for PCM VoIP by default
+use.voice.path.for.pcm.voip=true
+
+#
+#System property for FM transmitter
+#
+ro.fm.transmitter=false
+#enable dsp gapless mode by default
+audio.offload.gapless.enabled=true
+
+#property to enable user to access Google WFD settings
+persist.debug.wfd.enable=1
+#propery to enable VDS WFD solution
+persist.hwc.enable_vds=1
+
+#property to enable narrow search range for video encoding
+vidc.enc.narrow.searchrange=1
+
+#force soft keys
+qemu.hw.mainkeys=0
+
+#enable Sub-system restart (SSR) feature for RIL auto activated mbn
+persist.sys.ssr.restart_level=modem
+
+#disable logging from QC-QMI
+persist.data.qmi.adb_logmask=0
 
 # First api level, device has been commercially launched
 ro.product.first_api_level=22
@@ -31,9 +118,9 @@ ro.product.model.platform=1
 
 # Radio
 persist.radio.multisim.config=dsds
-persist.radio.custom_ecc=1
-persist.radio.ecc_hard_1=998
-persist.radio.ecc_hard_count=1
 rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
-ro.telephony.default_network=9
+rild.libargs=-d /dev/smd0
+ril.subscription.types=NV,RUIM
+DEVICE_PROVISIONED=1
+ro.telephony.default_network=10
 
