@@ -33,6 +33,11 @@ BOARD_CAMERA_SENSORS := s5k5e2_olq5f19 s5k3m2_olqba20 s5k4h5_cma334
 TARGET_USE_VENDOR_CAMERA_EXT := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 
+# Do not preoptimize prebuilts when building GApps (for arm)
+ifeq ($(TARGET_GAPPS_ARCH),arm)
+DONT_DEXPREOPT_PREBUILTS := true
+endif
+
 # Filesystem
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33553920
