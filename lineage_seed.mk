@@ -21,8 +21,8 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
-# Gapps stuff
-TARGET_GAPPS_ARCH := arm
+# Gapps stuff - Define it only when you building rom with gapps
+# TARGET_GAPPS_ARCH := arm
 TARGET_BOOT_ANIMATION_RES := 720
 
 # Device identifier. This must come after all inclusions
