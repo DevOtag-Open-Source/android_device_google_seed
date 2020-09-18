@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_seed.mk
+    $(LOCAL_DIR)/revengeos_seed.mk
 
 COMMON_LUNCH_CHOICES += \
-    lineage_seed-user \
-    lineage_seed-userdebug \
-    lineage_seed-eng
+    revengeos_seed-user \
+    revengeos_seed-userdebug \
+    revengeos_seed-eng
