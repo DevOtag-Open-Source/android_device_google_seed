@@ -70,6 +70,10 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 PRODUCT_PACKAGES += \
     DevOtag
 
+# Disable psi monitors
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lmk.use_psi=false
+
 # Display
 PRODUCT_PACKAGES += \
     libjni_livedisplay \
@@ -116,7 +120,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.light.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.light.xml \
     frameworks/native/data/etc/android.hardware.sensor.proximity.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.proximity.xml \
     $(LOCAL_PATH)/configs/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
-
 
 # Radio
 PRODUCT_COPY_FILES += \
