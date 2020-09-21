@@ -134,6 +134,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl
 
+# Set threshold filter 3 days for unused app(s)
+PRODUCT_PROPERTY_OVERRIDES += \
+    pm.dexopt.downgrade_after_inactive_days=3
+
 # Touchscreen
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/display/synaptics_dsx_fw_update_boyi.bin:system/etc/firmware/synaptics_dsx_fw_update_boyi.bin
