@@ -80,5 +80,8 @@ ifeq ($(WITH_TWRP),true)
 include $(DEVICE_PATH)/twrp.mk
 endif
 
+# Wi-Fi
+TARGET_USES_AOSP_FOR_WLAN := true
+
 # Inherit from proprietary files
 include vendor/google/seed/BoardConfigVendor.mk

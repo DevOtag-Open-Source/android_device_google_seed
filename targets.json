@@ -6,7 +6,8 @@
     "target_trees": ["android_device_google_seed|device/google/seed",
                      "android_device_cyanogen_msm8916-common|device/cyanogen/msm8916-common",
                      "android_kernel_google_seed|kernel/cyanogen/msm8916",
-                     "android_vendor_google|vendor/google"],
+                     "android_vendor_google|vendor/google",
+                     "android_hardware_qcom_wlan|hardware/qcom-caf/wlan"],
 
     "target_commits": {
             "android_art": ["d5a6dbd29efa7c4a341ab4f65bde1f04eac34d09",
