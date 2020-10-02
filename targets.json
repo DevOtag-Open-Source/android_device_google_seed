@@ -11,6 +11,8 @@
 
     "target_commits": {
             "android_art": ["d5a6dbd29efa7c4a341ab4f65bde1f04eac34d09",
-                            "295e71b5f6a5ce71ada603c100a9c25818c10978"]
+                            "295e71b5f6a5ce71ada603c100a9c25818c10978"],
+
+            "android_hardware_interfaces": "a1dae283a147aa324df6d708585128b7ff53c5c9",
     }
 }
