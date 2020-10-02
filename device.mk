@@ -96,7 +96,8 @@ PRODUCT_COPY_FILES += \
 # Init scripts
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    init.target.rc
+    init.target.rc \
+    init.logger.rc
 
 # Keylayout
 PRODUCT_COPY_FILES += \
