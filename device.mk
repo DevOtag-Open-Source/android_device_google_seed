@@ -159,4 +159,4 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, vendor/google/seed/seed-vendor.mk)
 
 # Add face unlock - Thanks to @Tenshi2112 for flag!
-TARGET_SUPPORT_FACE_UNLOCK := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
