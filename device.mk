@@ -157,3 +157,6 @@ PRODUCT_COPY_FILES += \
 
 # Call the proprietary setup
 $(call inherit-product, vendor/google/seed/seed-vendor.mk)
+
+# Add face unlock - Thanks to @Tenshi2112 for flag!
+TARGET_FACE_UNLOCK_SUPPORTED := true
