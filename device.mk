@@ -70,10 +70,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.lmk.use_psi=false
 
-# Disable trace
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.traced.enable=0
-
 # Display
 PRODUCT_PACKAGES += \
     libjni_livedisplay \
