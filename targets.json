@@ -15,6 +15,8 @@
 
             "android_hardware_interfaces": "a1dae283a147aa324df6d708585128b7ff53c5c9",
 
-            "android_hardware_libhardware": "bf61e2a21ad44073d3cf0eba3be943240ccbbf31"
+            "android_hardware_libhardware": "bf61e2a21ad44073d3cf0eba3be943240ccbbf31",
+
+            "android_system_security": "15633a3d29bf727b83083f2c49d906c16527d389"
     }
 }
