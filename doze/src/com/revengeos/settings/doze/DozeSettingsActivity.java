@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.doze;
+package com.revengeos.settings.doze;
 
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
