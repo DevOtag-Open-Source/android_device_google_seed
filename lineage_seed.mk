@@ -37,7 +37,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="seed_l8150-user 7.1.1 N0F27E 4103848 release-keys"
 
 BUILD_FINGERPRINT := google/seed/l8150:7.1.1/N0F27E/4103848:user/release-keys
-
-# Adds face unlock if package is available on ROM source
-# Thanks to @Tenshi2112 for telling about it
-TARGET_SUPPORT_FACE_UNLOCK := true
